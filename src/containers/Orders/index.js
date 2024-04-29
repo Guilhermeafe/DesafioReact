@@ -31,7 +31,7 @@ function Orders() {
   }, [])
 
   async function deleteOrder(orderId) {
-    await axios.delete(`http://localhost:3001/order/${orderId}`)
+    await axios.delete("http://localhost:3001/order/${orderId}")
     const newLach = lanch.filter(order => order.id !== orderId)
     setLanch(newLach)
   }
@@ -55,7 +55,7 @@ function Orders() {
           {lanch.map((order) => (
 
             <Order key={order.id}>
-              <p>{order.pedido}</p> - <p>{order.nome}</p>
+              <p>{order.order}</p> - <p>{order.clientName}</p>
               <button onClick={() => deleteOrder(order.id)}>
                 <img src={Trash} alt="lata-de-lixo" />
               </button>
