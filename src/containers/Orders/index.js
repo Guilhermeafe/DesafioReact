@@ -31,8 +31,8 @@ function Orders() {
   }, [])
 
   async function deleteOrder(orderId) {
-    await axios.delete("http://localhost:3001/order/${orderId}")
-    const newLach = lanch.filter(order => order.id !== orderId)
+    await axios.delete(`http://localhost:3001/order/${orderId}`);
+    const newLach = lanch.filter(order => order.id !== orderId);
     setLanch(newLach)
   }
 

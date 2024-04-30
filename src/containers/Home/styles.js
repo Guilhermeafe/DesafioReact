@@ -17,15 +17,17 @@ export const Container = styled.div`
 
 export const Image = styled.img`
     margin-top: 30px;
+    width: 184px;
 
 
 `;
 
 export const ContainerItens = styled.div`
-    padding: 50px 36px;
+    padding: 0px 36px;
     display: flex;
     flex-direction: column;
     height: 100%;
+    margin-bottom: 100px;
     
  
 
